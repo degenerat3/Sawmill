@@ -16,17 +16,16 @@
     }
   },
   {
-    "_id": "a2781c80-5c15-11e9-a324-3f1d417e1fcd",
+    "_id": "8d7eed60-5c22-11e9-a324-3f1d417e1fcd",
     "_type": "search",
     "_source": {
-      "title": "Newest Passwords",
+      "title": "Exploits",
       "description": "",
       "hits": 0,
       "columns": [
-        "CredType",
-        "Password",
-        "Username",
-        "VictimIP"
+        "victim",
+        "Application",
+        "AccessMessage"
       ],
       "sort": [
         "@timestamp",
@@ -34,7 +33,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"key\":\"LogType\",\"negate\":false,\"params\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"CREDENTIAL\"},\"query\":{\"match\":{\"LogType\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"}}}}]}"
+        "searchSourceJSON": "{\"index\":\"b52606d0-5c2e-11e9-a7e2-b944fc3da7a7\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
       }
     }
   },
@@ -46,7 +45,7 @@
       "description": "",
       "hits": 0,
       "columns": [
-        "VictimIP",
+        "victim",
         "Application"
       ],
       "sort": [
@@ -55,21 +54,22 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"query\":{\"wildcard\":{\"AccessMessage\":\"*beacon*\"}},\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"wildcard\\\":{\\\"AccessMessage\\\":\\\"*beacon*\\\"}}\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}]}"
+        "searchSourceJSON": "{\"index\":\"b52606d0-5c2e-11e9-a7e2-b944fc3da7a7\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"query\":{\"wildcard\":{\"AccessMessage\":\"*beacon*\"}},\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"wildcard\\\":{\\\"AccessMessage\\\":\\\"*beacon*\\\"}}\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}]}"
       }
     }
   },
   {
-    "_id": "8d7eed60-5c22-11e9-a324-3f1d417e1fcd",
+    "_id": "a2781c80-5c15-11e9-a324-3f1d417e1fcd",
     "_type": "search",
     "_source": {
-      "title": "Exploits",
+      "title": "Newest Passwords",
       "description": "",
       "hits": 0,
       "columns": [
-        "VictimIP",
-        "Application",
-        "AccessMessage"
+        "victim",
+        "CredType",
+        "Password",
+        "Username"
       ],
       "sort": [
         "@timestamp",
@@ -77,7 +77,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+        "searchSourceJSON": "{\"index\":\"b52606d0-5c2e-11e9-a7e2-b944fc3da7a7\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"key\":\"LogType\",\"negate\":false,\"params\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"CREDENTIAL\"},\"query\":{\"match\":{\"LogType\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"}}}}]}"
       }
     }
   },
