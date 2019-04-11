@@ -1,0 +1,42 @@
+Types/format of data ingested into TheRubble:
+
+Credential: Reach
+    VictimIP
+    CredType
+    Username
+    Password
+Example: Reach CREDENTIAL 8.8.8.8 system root ChangeMe123
+
+
+Hosts/Hosts6: Reach
+    VictimIP
+    HostIPAd
+    Hostname
+Example: Reach HOSTS 8.8.8.8 1.2.3.4 server.com
+
+
+Firewall/iptables: Reach
+    VictimIP
+    FwRules
+Example: Reach FIREWALL 8.8.8.8 iptables -t -j DROP
+
+
+Keystrokes: Reach(probably?)
+    VictimIP
+    Keystrokes
+Example: Reach KEYSTROKE 8.8.8.8 whatever data\nwe\npassword\nenter\n
+
+
+BoxAccess: pwnboard, deathnote, reclaimer
+    VictimIP
+    Message
+Example: Reclaimer BoxAccess 8.8.8.8 box accessed using GG exploit
+
+
+// Any generic logging that can be searched later. C2's and redteam servers can use this for the 
+Generic Logs: ??
+    Message
+
+
+EVERYTHING STARTS WITH:
+<APPLICATION> <TYPE>
