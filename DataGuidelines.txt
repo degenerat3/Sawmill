@@ -36,7 +36,7 @@ Example: Reach KEYSTROKE 8.8.8.8 whatever data\nwe\npassword\nenter\n
 BoxAccess: pwnboard, deathnote, reclaimer
     VictimIP
     Message
-Example: Reclaimer BoxAccess 8.8.8.8 box accessed using GG exploit
+Example: Reclaimer BOXACCESS 8.8.8.8 box accessed using GG exploit
 
 
 // Any generic logging that can be searched later. C2's and redteam servers can use this for the 
