@@ -35,7 +35,7 @@ Example: Reach KEYSTROKE 8.8.8.8 whatever data\nwe\npassword\nenter\n
 
 BoxAccess: pwnboard, deathnote, reclaimer
     VictimIP
-    Message
+    AccessMessage
 Example: Reclaimer BOXACCESS 8.8.8.8 box accessed using GG exploit
 
 
