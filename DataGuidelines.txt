@@ -15,6 +15,12 @@ Hosts/Hosts6: Reach
 Example: Reach HOSTS 8.8.8.8 1.2.3.4 server.com
 
 
+Route: Reach
+    VictimIP
+    RouteInfo
+Example: Reach ROUTE 8.8.8.8 1.2.3.4 via 127.0.0.1 dev lo
+
+
 Firewall/iptables: Reach
     VictimIP
     FwRules
