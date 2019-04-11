@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "03de0a70-5c16-11e9-a324-3f1d417e1fcd",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Blueteam status",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"1\",\"w\":18,\"x\":0,\"y\":6},\"id\":\"a2781c80-5c15-11e9-a324-3f1d417e1fcd\",\"panelIndex\":\"1\",\"title\":\"Passwords\",\"type\":\"search\",\"version\":\"6.7.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"2\",\"w\":48,\"x\":0,\"y\":0},\"id\":\"4708dc70-5c21-11e9-a324-3f1d417e1fcd\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.7.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":17,\"x\":18,\"y\":6},\"id\":\"68b9a0b0-5c22-11e9-a324-3f1d417e1fcd\",\"panelIndex\":\"3\",\"type\":\"search\",\"version\":\"6.7.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":0,\"y\":20},\"id\":\"8d7eed60-5c22-11e9-a324-3f1d417e1fcd\",\"panelIndex\":\"4\",\"type\":\"search\",\"version\":\"6.7.0\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "a2781c80-5c15-11e9-a324-3f1d417e1fcd",
+    "_type": "search",
+    "_source": {
+      "title": "Newest Passwords",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "CredType",
+        "Password",
+        "Username",
+        "VictimIP"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"key\":\"LogType\",\"negate\":false,\"params\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"CREDENTIAL\"},\"query\":{\"match\":{\"LogType\":{\"query\":\"CREDENTIAL\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "68b9a0b0-5c22-11e9-a324-3f1d417e1fcd",
+    "_type": "search",
+    "_source": {
+      "title": "Callbacks",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "VictimIP",
+        "Application"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"query\":{\"wildcard\":{\"AccessMessage\":\"*beacon*\"}},\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"wildcard\\\":{\\\"AccessMessage\\\":\\\"*beacon*\\\"}}\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "8d7eed60-5c22-11e9-a324-3f1d417e1fcd",
+    "_type": "search",
+    "_source": {
+      "title": "Exploits",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "VictimIP",
+        "Application",
+        "AccessMessage"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a965a0c0-5c11-11e9-a324-3f1d417e1fcd\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"LogType\",\"value\":\"BOXACCESS\",\"params\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"LogType\":{\"query\":\"BOXACCESS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "4708dc70-5c21-11e9-a324-3f1d417e1fcd",
+    "_type": "visualization",
+    "_source": {
+      "title": "Callbacks",
+      "visState": "{\"title\":\"Callbacks\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(q=LogType:BOXACCESS)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    }
+  }
+]
