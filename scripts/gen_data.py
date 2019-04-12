@@ -4,6 +4,7 @@ import socket
 import sys
 import os
 import time
+import json
 
 SYSLOGSOCK = None
 HOST=os.environ.get("SYSLOG_HOST", None)
@@ -13,8 +14,25 @@ PORT=int(os.environ.get("SYSLOG_PORT", -1))
 callback_sources = ["cobaltstrike", "crowdcontrol", "reclaimer",
          "empire", "anomaly", "blackice", "anomaly-win"]
 
-hosts = ["10.2.x.1",  "10.2.x.2", "10.2.x.3", "10.2.x.4", "10.2.x.5",
-         "10.3.x.1", "10.3.x.2", "10.3.x.3"]
+
+def get_hosts():
+    fname = None
+    if os.path.isfile("logstash/lookups/host_os.json"):
+        fname = "logstash/lookups/host_os.json"
+    elif os.path.isfile("../logstash/lookups/host_os.json"):
+        fname = "../logstash/lookups/host_os.json"
+    
+    if fname:
+        with open(fname) as fil:
+            data = json.load(fil)
+        print("Got hosts from", fname)
+        return [ip.replace("\\d+", "x") for ip in data.keys()]
+    return ["10.2.x.1",  "10.2.x.2", "10.2.x.3", "10.2.x.4", "10.2.x.5",
+            "10.3.x.1", "10.3.x.2", "10.3.x.3"]
+
+hosts = get_hosts()
+print(hosts)
+
 
 exploits = ["belt", "gg", "headshot", "nomnom", "trickshot"]
 
