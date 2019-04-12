@@ -14,3 +14,14 @@ discovery.zen.minimum_master_nodes: 1
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
 #
 discovery.type: single-node
+
+## Search Guard
+#
+searchguard.enterprise_modules_enabled: false
+
+searchguard.ssl.transport.keystore_filepath: sg/node-0-keystore.jks
+searchguard.ssl.transport.truststore_filepath: sg/truststore.jks
+searchguard.ssl.transport.enforce_hostname_verification: false
+
+searchguard.authcz.admin_dn:
+  - "CN=kirk,OU=client,O=client,l=tEst,C=De"

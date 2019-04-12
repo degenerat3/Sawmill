@@ -1,0 +1,33 @@
+# This is the internal user database
+# The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+
+#password is: admin
+admin:
+  readonly: true
+  hash: $2y$12$FL585iGqsFMpwwdTptKXnO9wQUTV7HaurrAVWqVseTqEFWTvqPScm
+  roles:
+    - admin
+
+#password is: logstash
+logstash:
+  hash: $2a$12$u1ShR4l4uBS3Uv59Pa2y5.1uQuZBrZtmNfqB3iM/.jL0XoV9sghS2
+  roles:
+    - logstash
+
+#password is: kibanaserver
+kibanaserver:
+  readonly: true
+  hash: $2a$12$4AcgAt3xwOWadA5s5blL6ev39OXDNhmOesEoo33eZtrq2N0YrU3H.
+
+#password is: lol no figure out
+redteam:
+  hash: $2y$12$4ef.3yX2/X/.6rP/pErNAeqOUAwsW7WupsvCoW29N8Uz8H.icjMRy
+  roles:
+    - kibanauser
+    - readall
+
+#password is: snapshotrestore
+snapshotrestore:
+  hash: $2y$12$DpwmetHKwgYnorbgdvORCenv4NAK8cPUg8AI6pxLCuWf/ALc0.v7W
+  roles:
+    - snapshotrestore
