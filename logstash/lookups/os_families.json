@@ -1,7 +1,10 @@
 {
     "[W|w]in(dows)?.*": "windows",
-    "[S|s]olaris|[P|p][F|f][S|s]ense.*": "unix",
+    "[C|c]ent.*": "linux",
+    "[F|f]edora.*": "linux",
+    "[A-Za-z]+buntu.*": "linux",
+    "([S|s]olaris|[P|p][F|f][S|s]ense).*": "unix",
     "([F|f]ree|[O|o]pen|[N|n]et)?[BSD|bsd].*": "unix",
-    "[C|c]ent|\\w+buntu|[F|f]edora.*": "linux",
+    "([C|c]ent|\\w+buntu|[F|f]edora).*": "linux",
     ".*": "unknown"
 }
