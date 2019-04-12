@@ -19,13 +19,13 @@ hosts = ["10.2.x.1",  "10.2.x.2", "10.2.x.3", "10.2.x.4", "10.2.x.5",
 exploits = ["belt", "gg", "headshot", "nomnom", "trickshot"]
 
 passes = ["123456", "12345", "123456789", "password", "iloveyou", "princess",
-             "1234567", "rockyou", "12345678", "abc123", "nicole", "daniel",
-             "babygirl", "monkey", "lovely", "jessica", "654321", "michael",
-             "ashley", "qwerty", "111111", "iloveu", "000000", "michelle",
-             "tigger", "sunshine", "chocolate", "password1", "soccer", "anthony",
-             "friends", "butterfly", "purple", "angel", "jordan", "liverpool",
-             "justin", "loveme", "fuckyou", "123123", "football", "secret", "andrea",
-             "carlos", "jennifer", "joshua", "bubbles", "1234567890", "superman", "hannah"]
+          "1234567", "rockyou", "12345678", "abc123", "nicole", "daniel",
+          "babygirl", "monkey", "lovely", "jessica", "654321", "michael",
+          "ashley", "qwerty", "111111", "iloveu", "000000", "michelle",
+          "tigger", "sunshine", "chocolate", "password1", "soccer", "anthony",
+          "friends", "butterfly", "purple", "angel", "jordan", "liverpool",
+          "justin", "loveme", "fuckyou", "123123", "football", "secret", "andrea",
+          "carlos", "jennifer", "joshua", "bubbles", "1234567890", "superman", "hannah"]
 
 users = ["username", "administrator", "root", "user1", "admin", "alex", "pos", "demo", "hulto", "Admin", "sql"]
 
