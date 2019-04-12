@@ -97,7 +97,7 @@ def send_timed(count, interval=30):
             print("Sending callback", callback)
             send_syslog(callback)
             time.sleep(random.randint(0,3)) # Sleep for 1-3 seconds and then send the next beacon
-        st = interval + random.randint(-15, 15)
+        st = max(1, interval + random.randint(-15, 15))
         print("Sleeping for", st, "seconds. (Iteration {})".format(i))
         time.sleep(st)  # Sleep for interval +- 15 seconds
 
