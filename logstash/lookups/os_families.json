@@ -1,0 +1,7 @@
+{
+    "[W|w]in(dows)?.*": "windows",
+    "([S|s]olaris|[P|p][F|f][S|s]ense).*": "unix",
+    "(([F|f]ree|[O|o]pen|[N|n]et)?[BSD|bsd]).*": "unix",
+    "([C|c]ent|\\w+buntu|[F|f]edora).*": "linux",
+    ".*": "unknown"
+}
