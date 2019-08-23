@@ -1,36 +1,36 @@
-Types/format of data ingested into TheRubble:
+Types/format of data ingested into Sawmill:
 
-Credential: Reach
+Credential: Chainsaw
     VictimIP
     CredType
     Username
     Password
-Example: Reach CREDENTIAL 8.8.8.8 system root ChangeMe123
+Example: Chainsaw CREDENTIAL 8.8.8.8 system root ChangeMe123
 
 
-Hosts/Hosts6: Reach
+Hosts/Hosts6: Chainsaw
     VictimIP
     HostIPAd
     Hostname
-Example: Reach HOSTS 8.8.8.8 1.2.3.4 server.com
+Example: Chainsaw HOSTS 8.8.8.8 1.2.3.4 server.com
 
 
-Route: Reach
+Route: Chainsaw
     VictimIP
     RouteInfo
-Example: Reach ROUTE 8.8.8.8 1.2.3.4 via 127.0.0.1 dev lo
+Example: Chainsaw ROUTE 8.8.8.8 1.2.3.4 via 127.0.0.1 dev lo
 
 
-Firewall/iptables: Reach
+Firewall/iptables: Chainsaw
     VictimIP
     FwRules
-Example: Reach FIREWALL 8.8.8.8 iptables -t -j DROP
+Example: Chainsaw FIREWALL 8.8.8.8 iptables -t -j DROP
 
 
-Keystrokes: Reach(probably?)
+Keystrokes: Chainsaw(probably?)
     VictimIP
     Keystrokes
-Example: Reach KEYSTROKE 8.8.8.8 whatever data\nwe\npassword\nenter\n
+Example: Chainsaw KEYSTROKE 8.8.8.8 whatever data\nwe\npassword\nenter\n
 
 
 BoxAccess: pwnboard, deathnote, reclaimer
