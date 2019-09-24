@@ -1,12 +1,21 @@
 ARG ELK_VERSION
-ARG ELK_FLAVOUR
 
 # https://github.com/elastic/elasticsearch-docker
-FROM docker.elastic.co/elasticsearch/elasticsearch${ELK_FLAVOUR}:${ELK_VERSION}
+FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
 
 COPY config/sg/ config/sg/
 COPY bin/ bin/
 
+# Search Guard plugin
+ARG ELK_VERSION
+ARG SG_VERSION
+RUN elasticsearch-plugin install --batch com.floragunn:search-guard-7:${ELK_VERSION}-${SG_VERSION} \
+	&& chmod +x plugins/search-guard-7/tools/*.sh \
+	&& chown -R elasticsearch config/sg/ \
+	&& chmod -R go= config/sg/
+
+# sgadmin and other third-party tools require a valid Java home
+ENV JAVA_HOME /usr/share/elasticsearch/jdk
 
 # Add your elasticsearch plugins setup here
 # Example: RUN elasticsearch-plugin install analysis-icu

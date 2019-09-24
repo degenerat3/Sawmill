@@ -8,4 +8,7 @@ elasticsearch.hosts: http://elasticsearch:9200
 
 ## Custom configuration
 #
+elasticsearch.username: "kibanaserver"
+elasticsearch.password: "kibanaserver"
 
+searchguard.cookie.password: "123567818187654rwrwfsfshdhdhtegdhfzftdhncn"
