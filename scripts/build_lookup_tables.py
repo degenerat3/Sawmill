@@ -60,11 +60,11 @@ def build_os_lookup(data):
 def main():
     with open(sys.argv[1]) as fil:
         data = json.load(fil)
-    with open("/tmp/host_os.json", 'w') as fil:
+    with open("logstash/lookups/host_os.json", 'w') as fil:
         fil.write(build_os_lookup(data)+"\n")
-    with open("/tmp/host_team.json", 'w') as fil:
+    with open("logstash/lookups/host_team.json", 'w') as fil:
         fil.write(build_teams_lookup(data)+"\n")
-    print("Lookups written to /tmp/host_os.json and /tmp/host_team.json")
+    print("Lookups written to logstash/lookups/host_os.json and logstash/lookups/host_team.json")
 
 if __name__ == "__main__":
     main()
